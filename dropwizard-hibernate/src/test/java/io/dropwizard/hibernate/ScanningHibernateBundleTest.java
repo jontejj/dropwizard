@@ -7,17 +7,19 @@ import org.junit.Test;
 
 import com.google.common.collect.ImmutableList;
 
-public class ScanningHibernateBundleTest {
+public class ScanningHibernateBundleTest
+{
 
-    @Test
-    public void testFindEntityClassesFromDirectory() {
-        //given
-        String packageWithEntities = "io.dropwizard.hibernate.fake.entities.pckg";
-        //when
-        ImmutableList<Class<?>> findEntityClassesFromDirectory = ScanningHibernateBundle.findEntityClassesFromDirectory(packageWithEntities);
+	@Test
+	public void testFindEntityClassesFromDirectory()
+	{
+		// given
+		String packageWithEntities = "io.dropwizard.hibernate.fake.entities.pckg";
+		// when
+		ImmutableList<Class<?>> findEntityClassesFromDirectory = ScanningHibernateBundle.findEntityClassesFromDirectory(packageWithEntities);
 
-        //then
-        assertFalse(findEntityClassesFromDirectory.isEmpty());
-        assertEquals(4, findEntityClassesFromDirectory.size());
-    }
+		// then
+		assertFalse(findEntityClassesFromDirectory.isEmpty());
+		assertEquals(3, findEntityClassesFromDirectory.size());
+	}
 }

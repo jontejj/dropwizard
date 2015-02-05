@@ -1,8 +1,9 @@
-package io.dropwizard.hibernate.fake.entities.pckg;
+package io.dropwizard.hibernate.fake.entities;
 
 import javax.persistence.Entity;
 
 @Entity
-public class FakeEntity1 {
+public class FakeEntity1
+{
 
 }
