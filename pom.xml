@@ -7,7 +7,7 @@
 
     <groupId>io.dropwizard</groupId>
     <artifactId>dropwizard-parent</artifactId>
-    <version>0.8.0-rc3-SNAPSHOT</version>
+    <version>0.8.0-rc2-INTERNAL</version>
     <packaging>pom</packaging>
     <name>Dropwizard Project</name>
     <url>${dropwizard.url}</url>
@@ -206,18 +206,18 @@
     </repositories>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Nexus Release Repository</name>
-            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>deployment</id>
+            <name>Internal Releases</name>
+            <url>http://10.98.32.25:8081/nexus/content/repositories/releases/</url>
         </repository>
+        <snapshotRepository>
+            <id>deployment</id>
+            <name>Internal Releases</name>
+            <url>http://10.98.32.25:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
     </distributionManagement>
-
+    
     <profiles>
         <profile>
             <id>release-sign-artifacts</id>
